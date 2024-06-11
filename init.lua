@@ -1,5 +1,4 @@
-print("Youkso")
--- vim.notify("Youksou!", vim.log.levels.INFO)
+print("ようkそう")
 require("keymaps")
 require("editor")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -15,7 +14,3 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
-vim.cmd.colorscheme("gruvbox")
-function jakul(name)
-  print(name .. " Nice Works!")
-end
