@@ -28,7 +28,6 @@ return {
               single_file_support = true,
               filetypes = { "c", "cpp" },
               root_dir = lspconfig.util.root_pattern('.clangd','compile_commands.json'),
-            --}
             })
         end
     }
