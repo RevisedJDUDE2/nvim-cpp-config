@@ -1,4 +1,3 @@
-vim.cmd.colorscheme("gruvbox")
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.showmode = false
