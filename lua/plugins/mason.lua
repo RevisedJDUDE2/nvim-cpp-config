@@ -34,7 +34,7 @@ return {
 
             lspconfig.clangd.setup({
               --FIND FOR INCLUDES? , AND SET THE COMPILE COMMANDS DIR TO .,  RUN CLANGD
-              cmd = { "clangd", "--query-driver", "C:\\msys64\\mingw64\\bin\\g++.exe", "--compile-commands-dir=.", },
+              cmd = { "clangd", "--query-driver", "C:\\msys64\\mingw64\\bin\\", },
               capabilities = capabilities,
               --IDK WHY?
               single_file_support = true,
