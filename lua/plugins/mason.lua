@@ -43,7 +43,9 @@ return {
               --FILE??????
               root_dir = lspconfig.util.root_pattern('.clangd','compile_commands.json'),
             })
-            print("Running: "..lspconfig.clangd.cmd[1].." "..lspconfig.clangd.cmd[2].." "..lspconfig.clangd.cmd[3])
+            local function DEBUG_CLANGD()
+              print("Running: "..lspconfig.clangd.cmd[1].." "..lspconfig.clangd.cmd[2].." "..lspconfig.clangd.cmd[3])
+            end
         end
     }
 }
