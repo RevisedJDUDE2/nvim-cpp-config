@@ -34,7 +34,7 @@ return {
 
             lspconfig.clangd.setup({
               --FIND FOR INCLUDES? , AND SET THE COMPILE COMMANDS DIR TO .,  RUN CLANGD
-              cmd = { "clangd", "--query-driver=C:/msys64/mingw64/bin/", "--compile-commands-dir=./build" },
+              cmd = { "clangd", "--query-driver=C:/msys64/mingw64/bin/g++.exe", "--compile-commands-dir=./build" },
               --print("Running: "..cmd[1].. cmd[2].."="..cmd[3])
               capabilities = capabilities,
               --IDK WHY?
@@ -43,7 +43,7 @@ return {
               --FILE??????
               root_dir = lspconfig.util.root_pattern('.clangd','compile_commands.json'),
             })
-            print("Running: "..lspconfig.clangd.cmd[1]..lspconfig.clangd.cmd[2].."="..lspconfig.clangd.cmd[3])
+            print("Running: "..lspconfig.clangd.cmd[1].." "..lspconfig.clangd.cmd[2].." "..lspconfig.clangd.cmd[3])
         end
     }
 }
