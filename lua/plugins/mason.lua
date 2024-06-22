@@ -34,7 +34,7 @@ return {
             print("LSP MASON HERE")
             lspconfig.clangd.setup({
               --FIND FOR INCLUDES? , AND SET THE COMPILE COMMANDS DIR TO .,  RUN CLANGD
-              cmd = { "clangd", "--query-driver=C:/msys64/mingw64/bin/g++.exe", "--compile-commands-dir=./build", "--log=error", "--background-index", },
+              cmd = { "clangd", "--query-driver=C:/msys64/mingw64/bin/c++.exe", "--compile-commands-dir=./build", "--log=error", "--background-index", },
               --print("Running: "..cmd[1].. cmd[2].."="..cmd[3])
               capabilities = capabilities,
               --IDK WHY?
