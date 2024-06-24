@@ -1,7 +1,7 @@
 "languageserver": {
   "clangd": {
     "command": "clangd",
-    "args": ["--query-driver=C:/msys64/mingw64/bin/g++.exe", "--compile-commands-dir=C:/Users/User/Documents/C++/onix-experimentalcode-dx/build"],
+    "args": ["--query-driver=C:/msys64/mingw64/bin/g++.exe"],
     "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
   }
