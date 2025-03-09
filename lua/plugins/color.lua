@@ -10,10 +10,10 @@ return {
   bold = true,
   italic = {
     strings = false,
-    emphasis = true,
+    emphasis = false,
     comments = false,
     operators = false,
-    folds = true,
+    folds = false,
   },
   strikethrough = true,
   invert_selection = false,
