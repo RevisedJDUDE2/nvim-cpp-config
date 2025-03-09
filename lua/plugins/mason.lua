@@ -28,6 +28,7 @@ return {
               filetypes = { "c", "cpp" },
               on_attach = function (cli, bufnr)
                 require "lsp_signature".on_attach(cli, bufnr)
+                vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {noremap = true, silent = true, buffer = bufnr})
               end
             })
         end

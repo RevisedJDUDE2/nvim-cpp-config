@@ -26,3 +26,10 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 vim.opt.guifont = "IosevkaTerm Nerd Font:h12"
 vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { noremap = true, silent = true })
+local opts = { noremap = true, silent = true }
+-- Show diagnostic message in a floating window for the current line
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
+-- Jump to the previous diagnostic
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+-- Jump to the next diagnostic
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
