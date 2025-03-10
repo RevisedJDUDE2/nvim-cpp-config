@@ -39,3 +39,4 @@ vim.opt.incsearch = true
 
 vim.opt.updatetime = 10
 --vim.opt.swapfile = false
+require("build-script")
