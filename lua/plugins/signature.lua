@@ -4,7 +4,7 @@ return {
   opts = {
     bind = true,
     handler_opts = {
-      border = "single"
+      border = "none"
     }
   },
   -- or use config
