@@ -33,3 +33,9 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 -- Jump to the next diagnostic
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.updatetime = 10
+--vim.opt.swapfile = false

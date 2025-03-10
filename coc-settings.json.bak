@@ -1,8 +1,0 @@
-{
-  "clangd.arguments": ["--query-driver=C:/msys64/mingw64/bin/g*.exe", "--background-index", "--clang-tidy"]
-  "clangd.fallbackFlags": [
-    "-std=c++23"
-  ],
-  "clangd.path": "~\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\18.1.3\\clangd_18.1.3\\bin\\clangd.exe",
-  "clangd.compilationDatabasePath": ".//build",
-}

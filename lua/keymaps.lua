@@ -10,3 +10,5 @@ local opts = { noremap = true, silent = true }
 map('n', '<leader>bp', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<leader>bn', '<Cmd>BufferNext<CR>', opts)
 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv");
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv");
