@@ -1,5 +1,4 @@
-print("ようこそ")
-require("keymaps")
+print("ようこそ") require("keymaps")
 require("editor")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -40,3 +39,6 @@ vim.opt.incsearch = true
 vim.opt.updatetime = 10
 --vim.opt.swapfile = false
 require("build-script")
+vim.g.gruvbox_italic = 0
+vim.api.nvim_set_hl(0, "Normal", {guibg=NONE, ctermbg=NONE})
+require("win_open")
