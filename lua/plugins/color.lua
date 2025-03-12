@@ -3,7 +3,7 @@ return {
 	"ellisonleao/gruvbox.nvim",
 	priority = 1000,
 	config = true,
-
+  opts = {
   terminal_colors = true, -- add neovim terminal colors
   undercurl = true,
   underline = true,
@@ -25,5 +25,6 @@ return {
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
-  transparent_mode = false,
+  transparent_mode = true,
+}
 }

@@ -8,6 +8,7 @@ return {
   			},
   			view = {
     				width = 25,
+            signcolumn = "no",
   			},
   			renderer = {
     				group_empty = false,
@@ -15,6 +16,9 @@ return {
   			filters = {
     				dotfiles = true,
   			},
+        update_focused_file = {
+            enable = true,
+        },
 		})
 	end
 }

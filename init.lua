@@ -40,5 +40,5 @@ vim.opt.updatetime = 10
 --vim.opt.swapfile = false
 require("build-script")
 vim.g.gruvbox_italic = 0
-vim.api.nvim_set_hl(0, "Normal", {guibg=NONE, ctermbg=NONE})
-require("win_open")
+vim.api.nvim_set_hl(0, "Normal", {guibg=NONE, ctermbg=NONE, guifg=NONE, gui=NONE})
+vim.opt.fillchars = { eob = " " }
