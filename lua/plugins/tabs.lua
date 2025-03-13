@@ -10,12 +10,9 @@ return {
     animation = false,
     clickable = true,
     icons = {
-      separator = {left = ' ', right = ' '},
-      modified = {button = 'w'},
-      button = "+",
-      filetype = {
-        custom_colors = true,
-      }
+      separator = {left = '', right = ' '},
+      modified = {button = '*'},
+      button = "x",
     }
   },
   version = '^1.0.0',

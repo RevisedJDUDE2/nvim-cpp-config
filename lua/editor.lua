@@ -10,5 +10,19 @@ vim.opt.expandtab = true
 vim.opt.ruler = true -- enables ruler (optional for some themes)
 vim.opt.autoindent = true -- enables autoindent
 vim.opt.smartindent = true -- enables smartindent
-
 vim.opt.clipboard = "unnamedplus"
+vim.opt.fillchars = { eob = " " }
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.updatetime = 10
+vim.opt.swapfile = false
+vim.opt.guifont = "IosevkaTerm Nerd Font:h12"
+vim.cmd("colorscheme gruvbox")
+
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = '*',
+  callback = function()
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+  end,
+})

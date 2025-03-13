@@ -12,3 +12,19 @@ map('n', '<leader>bn', '<Cmd>BufferNext<CR>', opts)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv");
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv");
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { noremap = true, silent = true })
+-- Show diagnostic message in a floating window for the current line
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
+-- Jump to the previous diagnostic
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+-- Jump to the next diagnostic
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+vim.keymap.set("n", "<leader>df", vim.lsp.buf.format, opts);
+vim.api.nvim_set_keymap('t', '<C-t>c', '<C-\\><C-n>', { noremap = true, silent = true })
