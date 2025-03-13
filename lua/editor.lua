@@ -26,3 +26,4 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.opt_local.relativenumber = false
   end,
 })
+vim.opt.guicursor = "n-v-c-i:block"
