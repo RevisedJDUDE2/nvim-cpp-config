@@ -16,7 +16,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.updatetime = 10
 vim.opt.swapfile = false
-vim.opt.guifont = "IosevkaTerm Nerd Font:h12"
+vim.opt.guifont = "IosevkaTerm NF:h12"
 vim.cmd("colorscheme gruvbox")
 
 vim.api.nvim_create_autocmd('TermOpen', {
