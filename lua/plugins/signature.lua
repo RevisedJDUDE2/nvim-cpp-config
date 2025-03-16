@@ -11,6 +11,6 @@ return {
       doc_lines = 0,
       max_height = 6,
     })
-    require("notify")("LSP SIGNATURE WORKING", "info")
+    --require("notify")("LSP SIGNATURE WORKING", "info")
   end
 }
