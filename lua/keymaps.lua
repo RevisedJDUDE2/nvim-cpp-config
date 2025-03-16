@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>n", "<cmd>:NvimTreeFocus<cr>")
 --vim.keymap.set( {"n", "v"}, "<leader>w", "<cmd>:w!<cr>")
 vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>")

@@ -1,5 +1,5 @@
 --print("ようこそ")
-vim.notify("ようこそ", "error")
+vim.g.mapleader = " "
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -17,3 +17,4 @@ require("keymaps")
 require("editor")
 require("build-script")
 --vim.g.gruvbox_italic = 0
+require("notify")("ようこそ", "info")
