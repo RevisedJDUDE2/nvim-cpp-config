@@ -6,7 +6,6 @@ return {
 				stages = "fade",
 				timeout = 3000,
 				render = "minimal",
-				background_colour = "Normal",
 			})
 			vim.notify = require("notify")
 		end,
@@ -18,7 +17,13 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		config = function()
-			require("noice").setup({})
+			require("noice").setup({
+        lsp = {
+          signature = {
+            enabled = false,
+          }
+        }
+      })
 		end,
 	},
 }

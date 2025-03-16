@@ -27,4 +27,6 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set("n", "<leader>df", vim.lsp.buf.format, opts);
 vim.api.nvim_set_keymap('t', '<C-t>c', '<C-\\><C-n>', { noremap = true, silent = true })
-
+vim.keymap.set("n", "<leader>ca", function ()
+  vim.lsp.buf.code_action()
+end)
