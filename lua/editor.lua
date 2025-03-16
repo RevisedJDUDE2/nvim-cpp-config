@@ -27,3 +27,4 @@ vim.api.nvim_create_autocmd('TermOpen', {
   end,
 })
 vim.opt.guicursor = "n-v-c-i:block"
+vim.opt.termguicolors = true
