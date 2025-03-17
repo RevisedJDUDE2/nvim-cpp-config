@@ -9,10 +9,7 @@ return {
           theme = 'gruvbox',
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
-          disabled_filetypes = {
-            statusline = {},
-            winbar = {},
-          },
+          disabled_filetypes = {"NVimTree"},
           ignore_focus = {},
           always_divide_middle = true,
           globalstatus = false,
