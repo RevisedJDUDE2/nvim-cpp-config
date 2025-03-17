@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd" }
+        ensure_installed = { "lua_ls", "clangd", "gopls" }
       })
     end
   },
@@ -46,6 +46,12 @@ return {
           require "lsp_signature".on_attach(cli, bufnr)
           vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { noremap = true, silent = true, buffer = bufnr })
         end
+      })
+      lspconfig.gopls.setup({
+        capabilities = capabilities,
+        cmd = {"gopls"},
+        filetypes = { "go", "gomod", "gowork", "gotmpl" },
+        root_dir = require"lspconfig.util".root_pattern("go.work", "go.mod", ".git"),
       })
     end
   }
