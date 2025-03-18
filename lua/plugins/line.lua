@@ -1,15 +1,15 @@
 return {
   {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require('lualine').setup {
+      require("lualine").setup({
         options = {
           icons_enabled = true,
-          theme = 'gruvbox',
-          component_separators = { left = '', right = '' },
-          section_separators = { left = '', right = '' },
-          disabled_filetypes = {"NVimTree"},
+          theme = "gruvbox",
+          component_separators = { left = "", right = "" },
+          section_separators = { left = "", right = "" },
+          disabled_filetypes = { "NVimTree" },
           ignore_focus = {},
           always_divide_middle = true,
           globalstatus = false,
@@ -17,29 +17,41 @@ return {
             statusline = 10,
             tabline = 10,
             winbar = 10,
-          }
+          },
         },
         sections = {
-          lualine_a = { 'mode' },
-          lualine_b = { 'diagnostics' },
-          lualine_c = { 'filename' },
-          lualine_x = { 'filetype' },
-          lualine_y = {},
-          lualine_z = {}
+          lualine_a = { "mode" },
+          lualine_b = { "diagnostics" },
+          lualine_c = {
+            {
+              "filename",
+              file_status = true,
+              path = 1,
+              symbols = {
+                modified = "[*]",
+                readonly = "[READ ONLY!]",
+                unnamed = "[No Name]",
+                newfile = "[New]",
+              },
+            },
+          },
+          lualine_x = { "filetype" },
+          lualine_y = {"diff"},
+          lualine_z = { "os.date('%a %I:%M:%S %p')", "location" },
         },
         inactive_sections = {
           lualine_a = {},
           lualine_b = {},
-          lualine_c = { 'filename' },
-          lualine_x = { 'location' },
+          lualine_c = { "filename" },
+          lualine_x = { "location" },
           lualine_y = {},
-          lualine_z = {}
+          lualine_z = {},
         },
         tabline = {},
         winbar = {},
         inactive_winbar = {},
-        extensions = { 'nvim-tree' },
-      }
-    end
-  }
+        extensions = { "nvim-tree" },
+      })
+    end,
+  },
 }
