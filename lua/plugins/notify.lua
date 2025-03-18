@@ -6,6 +6,7 @@ return {
 				stages = "fade",
 				timeout = 3000,
 				render = "minimal",
+        background_colour = "#000000",
 			})
 			vim.notify = require("notify")
 		end,
@@ -22,7 +23,10 @@ return {
           signature = {
             enabled = false,
           }
-        }
+        },
+        views = {
+          cmdline_popup = {border = {style = "single", padding = {0,0} }},
+        },
       })
 		end,
 	},
