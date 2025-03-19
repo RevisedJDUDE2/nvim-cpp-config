@@ -6,7 +6,7 @@ return {
     require("telescope").setup({
       defaults = {
         borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-        file_ignore_patterns = { "%.idx$", "%.git/", "clangd%-cache/" },
+        file_ignore_patterns = { "%.idx", "%.git/*", "clangd%-cache/" },
       },
     })
   end,

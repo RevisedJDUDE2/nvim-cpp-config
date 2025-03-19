@@ -17,7 +17,10 @@ vim.opt.incsearch = true
 vim.opt.updatetime = 10
 vim.opt.swapfile = false
 vim.opt.guifont = "Iosevka NF:h12"
-vim.cmd("colorscheme gruvbox")
+if _G.theme == nil or _G.theme == ' ' or _G.theme == '' then
+  _G.theme = "vim"
+end
+vim.cmd("colorscheme ".._G.theme)
 
 vim.api.nvim_create_autocmd('TermOpen', {
   pattern = '*',
