@@ -36,8 +36,8 @@ return {
             },
           },
           lualine_x = { "filetype" },
-          lualine_y = {"diff"},
-          lualine_z = { "os.date('%a %I:%M:%S %p')", "location" },
+          lualine_y = {"diff", "branch"},
+          lualine_z = { "os.date('%a %I:%M %p')", "location" },
         },
         inactive_sections = {
           lualine_a = {},

@@ -35,3 +35,12 @@ vim.api.nvim_create_autocmd('TermOpen', {
 })
 vim.opt.guicursor = "n-v-c-i:block"
 vim.opt.termguicolors = true
+vim.api.nvim_create_user_command("Transparent", function ()
+  --local gruvbox = require("gruvbox")
+  --gruvbox.config.transparent_mode = not gruvbox.config.transparent_mode
+  --gruvbox.setup(gruvbox.config)
+  require("gruvbox").setup({
+    transparent_mode = true,
+  })
+  vim.cmd("colorscheme gruvbox")
+end, {})
