@@ -52,6 +52,9 @@ return {
         cmd = {"gopls"},
         filetypes = { "go", "gomod", "gowork", "gotmpl" },
         root_dir = require"lspconfig.util".root_pattern("go.work", "go.mod", ".git"),
+        on_attach = function(cli, bufnr)
+          require "lsp_signature".on_attach(cli, bufnr)
+        end
       })
     end
   }
