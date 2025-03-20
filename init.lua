@@ -24,7 +24,6 @@ while inp ~= "" and inp ~= " " do
 	end
 	inp = vim.fn.input("Invalid input. Please enter 'g' or 't': "):lower()  -- Ask again
 end
-vim.wait(5000, function() return _G.theme ~= nil end, 100)
 
 require("lazy").setup("plugins")
 require("keymaps")

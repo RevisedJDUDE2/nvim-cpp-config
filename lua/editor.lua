@@ -1,11 +1,13 @@
+local tabsize = 2
+local default_theme = "habamax" --"retrobox" 
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.showmode = false
 vim.o.wrap = false
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = tabsize
+vim.opt.softtabstop = tabsize
+vim.opt.shiftwidth = tabsize
 vim.opt.expandtab = true
 vim.opt.ruler = true -- enables ruler (optional for some themes)
 vim.opt.autoindent = true -- enables autoindent
@@ -14,11 +16,13 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.fillchars = { eob = " " }
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.updatetime = 10
+vim.opt.updatetime = 5
 vim.opt.swapfile = false
 vim.opt.guifont = "Iosevka NF:h12"
+vim.opt.backup = false
 if _G.theme == nil or _G.theme == ' ' or _G.theme == '' then
-  _G.theme = "vim"
+  _G.theme = default_theme
+  _G.theme_name = "base16"
 end
 vim.cmd("colorscheme ".._G.theme)
 
