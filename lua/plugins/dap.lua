@@ -26,6 +26,7 @@ return {
         stopAtEntry = true,
       },
     }
+    dap.configurations.c = dap.configurations.cpp
     dap.set_log_level("DEBUG")
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
