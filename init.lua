@@ -22,12 +22,13 @@ while inp ~= "" and inp ~= " " do
 		_G.theme = "tokyonight-night"
 		break
 	end
-	inp = vim.fn.input("Invalid input. Please enter 'g' or 't': "):lower()  -- Ask again
+	inp = vim.fn.input("Invalid input. Please enter 'g' or 't': "):lower()  -- Ask again --ask
 end
 
 require("lazy").setup("plugins")
 require("keymaps")
 require("editor")
 require("build-script")
---vim.g.gruvbox_italic = 0
+vim.g.gruvbox_italic = 1
 require("notify")("ようこそ", "info")
+vim.api.nvim_set_hl(0, "Comment", { fg = "#928374", italic = true })

@@ -18,7 +18,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.updatetime = 5
 vim.opt.swapfile = false
-vim.opt.guifont = "Iosevka NF:h12"
+--vim.opt.guifont = "Iosevka NF Bold:h12"
 vim.opt.backup = false
 if _G.theme == nil or _G.theme == ' ' or _G.theme == '' then
   _G.theme = default_theme
