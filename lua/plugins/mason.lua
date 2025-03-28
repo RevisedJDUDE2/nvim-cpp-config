@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "gopls" }
+        ensure_installed = { "lua_ls", "clangd", "gopls" },
       })
     end
   },
@@ -55,6 +55,22 @@ return {
         on_attach = function(cli, bufnr)
           require "lsp_signature".on_attach(cli, bufnr)
         end
+      })
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities,
+        filetypes = {"rust", "rs"},
+        cmd = {"C:/Users/User/AppData/Local/nvim-data/mason/bin/rust-analyzer.cmd"},
+        root_dir = require("lspconfig.util").root_pattern("Cargo.toml", "rust-project.json", ".git"),
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              loadOutDirsFromCheck = true
+            },
+            procMacro = {
+              enable = true
+            }
+          }
+        }
       })
     end
   }
