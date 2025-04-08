@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "gopls", "cmake" },
+        ensure_installed = { "lua_ls", "clangd", "cmake" },
       })
     end
   },
@@ -18,6 +18,11 @@ return {
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
+      local data_path = vim.fn.stdpath("data"):gsub("\\", "/")
+      local mason_bin = "/mason/bin"
+      local mason_pckgs = "/mason/packages"
+      local lsp_util = require("lspconfig.util")
+
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
         settings = {
@@ -28,9 +33,6 @@ return {
             diagnostics = {
               globals = { "vim" },
             },
-            workspace = {
-              library = vim.api.nvim_get_runtime_file("", true),
-            },
             telemetry = {
               enable = false,
             },
@@ -40,7 +42,7 @@ return {
       })
       lspconfig.clangd.setup({
         capabilities = capabilities,
-        cmd = { "C:/Users/User/AppData/Local/nvim-data/mason/packages/clangd/clangd_19.1.2/bin/clangd.exe", "--query-driver=C:/msys64/ucrt64/bin/g*.exe", "--background-index", "--clang-tidy", "--header-insertion=never", "--inlay-hints=true", "--completion-style=detailed" },
+        cmd = { data_path..mason_pckgs.."/clangd/clangd_20.1.0/bin/clangd.exe", "--query-driver=C:/msys64/ucrt64/bin/g*.exe", "--background-index", "--clang-tidy", "--header-insertion=never", "--inlay-hints=true", "--completion-style=detailed" },
         filetypes = { "c", "cpp" },
         on_attach = function(cli, bufnr)
           require "lsp_signature".on_attach(cli, bufnr)
@@ -75,9 +77,11 @@ return {
 
       lspconfig.cmake.setup({
         capabilities = capabilities,
-        cmd = {"C:/Users/User/AppData/Local/nvim-data/mason/bin/cmake-language-server.cmd"},
-        root_dir = require("lspconfig.util").root_pattern("txt", "cmake"),
+        cmd = {data_path..mason_bin.."/cmake-language-server.cmd"},
+        root_dir = lsp_util.root_pattern("txt", "cmake"),
       })
+
+      lspconfig.glsl_analyzer.setup{}
     end
   }
 }
