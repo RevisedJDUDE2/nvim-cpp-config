@@ -7,6 +7,7 @@ return {
       defaults = {
         borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
         file_ignore_patterns = { "%.idx", "%.git/*", "clangd%-cache/" },
+        selection_caret = '> ',
       },
     })
   end,

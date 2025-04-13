@@ -4,6 +4,7 @@ return {
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
+      --"hrsh7th/cmp-cmdline",
     }
   },
   {
@@ -88,6 +89,8 @@ return {
           end
         }
       })
+
+
     end
   }
 }

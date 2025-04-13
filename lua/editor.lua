@@ -44,3 +44,5 @@ vim.api.nvim_create_user_command("Transparent", function ()
   })
   vim.cmd("colorscheme gruvbox")
 end, {})
+
+vim.opt.cmdheight = 0
