@@ -42,7 +42,7 @@ return {
       })
       lspconfig.clangd.setup({
         capabilities = capabilities,
-        cmd = { data_path..mason_pckgs.."/clangd/clangd_20.1.0/bin/clangd.exe", "--query-driver=C:/msys64/ucrt64/bin/g*.exe", "--background-index", "--clang-tidy", "--header-insertion=never", "--inlay-hints=true", "--completion-style=detailed" },
+        cmd = { data_path..mason_bin.."/clangd.cmd", "--query-driver=C:/msys64/mingw64/bin/g*.exe", "--background-index", "--clang-tidy", "--header-insertion=never", "--inlay-hints=true", "--completion-style=detailed" },
         filetypes = { "c", "cpp" },
         on_attach = function(cli, bufnr)
           require "lsp_signature".on_attach(cli, bufnr)
